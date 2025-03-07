@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IESSN Membership Signup</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; text-align: center; }
+        header { background: #0073e6; color: white; padding: 20px; font-size: 24px; }
+        .container { width: 50%; margin: auto; padding: 20px; }
+        .form-container { display: none; border: 1px solid #ccc; padding: 20px; margin-top: 10px; }
+        label { display: block; margin-top: 10px; }
+        input { width: 100%; padding: 8px; margin-top: 5px; }
+        button { margin-top: 10px; padding: 10px; background: #0073e6; color: white; border: none; cursor: pointer; }
+        button:hover { background: #005bb5; }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="logo.png" alt="Company Logo" height="50">
+        <h1>Welcome to IESSN Membership Portal</h1>
+    </header>
+    <div class="container">
+        <p>Join us today by selecting the membership type and filling out the form.</p>
+        <select id="membershipType" onchange="showForm()">
+            <option value="">-- Select Membership Type --</option>
+            <option value="individual">Individual</option>
+            <option value="publisher">Publisher</option>
+            <option value="institute">Institute</option>
+        </select>
+        
+        <form id="individualFormElement" class="form-container" onsubmit="validateForm('individual', event)">
+            <h3>Individual Membership</h3>
+            <label>Name:</label><input type="text" id="individualName" required>
+            <label>Address:</label><input type="text" id="individualAddress" required>
+            <label>Email ID:</label><input type="email" id="individualEmail" required>
+            <label>Phone No:</label><input type="number" id="individualNumber" required>
+            <label>URL:</label><input type="url" id="individualUrl" required>
+            <label>Password: </label><input type="password" id="individualPassword" required>
+            <label>Confirm Password:</label><input type="password" id="individualConfirmPassword" required>
+            <button type="submit">Submit</button>
+        </form>
+        
+        <form id="publisherFormElement" class="form-container" onsubmit="validateForm('publisher', event)">
+            <h3>Publisher Membership</h3>
+            <label>Name:</label><input type="text" id="publisherName" required>
+            <label>Address:</label><input type="text" id="publisherAddress" required>
+            <label>Email ID:</label><input type="email" id="publisherEmail" required>
+            <label>Phone No:</label><input type="number" id="publisherNumber" required>
+            <label>URL:</label><input type="url" id="publisherUrl" required>
+            <label>Password: </label><input type="password" id="publisherPassword" required>
+            <label>Confirm Password:</label><input type="password" id="publisherConfirmPassword" required>
+            <button type="submit">Submit</button>
+        </form>
+        
+        <form id="instituteFormElement" class="form-container" onsubmit="validateForm('institute', event)">
+            <h3>Institute Membership</h3>
+            <label>Name:</label><input type="text" id="instituteName" required>
+            <label>Designation:</label><input type="text" id="instituteDesignation" required>
+            <label>Address:</label><input type="text" id="instituteAddress" required>
+            <label>Email ID:</label><input type="email" id="instituteEmail" required>
+            <label>Phone No:</label><input type="number" id="instituteNumber" required>
+            <label>URL:</label><input type="url" id="instituteUrl" required>
+            <label>Password: </label><input type="password" id="institutePassword" required>
+            <label>Confirm Password:</label><input type="password" id="instituteConfirmPassword" required>
+            <button type="submit">Submit</button>
+        </form>
+        
+        <script src="intro.js"></script>
+        
+</body>
+</html>
